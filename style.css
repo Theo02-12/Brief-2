@@ -16,7 +16,7 @@ section:nth-of-type(2){
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+
 }
 header{
     width: 100%;
@@ -47,7 +47,7 @@ header a{
   width: 100%;
   height: 10%;
   text-align: center;
-  bottom: -5%;
+  bottom: 0%;
   position: absolute;
 }
 header div:nth-of-type(1){
@@ -57,7 +57,7 @@ header div:nth-of-type(1){
   background-size: cover;
   background-position: 100%;
 }
-h1 .letter::after{
+h1 span:first-child::after{
   content: ".";
   display: none;
 }
@@ -67,7 +67,7 @@ section:nth-of-type(1) a{
   width: 100%;
   height: 10%;
   text-align: center;
-  bottom: -105%;
+  bottom: -100%;
   position: absolute;
 }
 section:nth-of-type(1){
@@ -88,23 +88,21 @@ section:nth-of-type(2) a{
   width: 100%;
   height: 10%;
   text-align: center;
-  bottom: -205%;
+  bottom: -200%;
   position: absolute;
 }
 .section a i{
     color: #000000;
 }
-.container{
-    height: 100%;
-}
-.grid-container {
+section:nth-of-type(2) div:has(div){
+    height: 90%;
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(5, 150px);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-.grid-item {
+  section:nth-of-type(2) div:not(div:has(div)) {
     width: 150px;
     height: 150px;
     display: flex;
@@ -118,12 +116,12 @@ section:nth-of-type(2) a{
     transition-duration: .5s, .5s ;
     box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.5) inset;
   }
-.grid-item:hover p{
+  section:nth-of-type(2) div:not(div:has(div)):hover p{
     animation-name: rotation;
     transition: .3s;
     transform: rotate(359deg);
 }
-.grid-item:hover{
+section:nth-of-type(2) div:not(div:has(div)):hover{
     transform: scale(1.1);
 }
 .grid-content{
@@ -133,23 +131,23 @@ section:nth-of-type(2) a{
     justify-content: center;
     align-items: center;
 }
-  .grid-container div:first-child{
+  section:nth-of-type(2) div:first-child div:first-child{
     grid-area: 1 / 3 / 1 / 4;
   }
-  .grid-container div:nth-of-type(2){
+  section:nth-of-type(2) div:has(div) div:nth-of-type(2){
     grid-area: 2 / 2 / 2 / 3;
   }
-  .grid-container div:nth-of-type(3){
+  section:nth-of-type(2) div:has(div) div:nth-of-type(3){
     grid-area: 2 / 4 / 2 / 5;
   }
-  .grid-container div:nth-of-type(4){
+  section:nth-of-type(2) div:has(div) div:nth-of-type(4){
     grid-row-start: 3;
     grid-row-end: 3;
   }
-  .grid-container div:nth-of-type(5){
+  section:nth-of-type(2) div:has(div) div:nth-of-type(5){
     grid-area: 3 / 3 / 3 / 4;
   }
-  .grid-container div:nth-of-type(6){
+  section:nth-of-type(2) div:has(div) div:nth-of-type(6){
    grid-area: 3 / 5 / 3 / 6;
   }
 
@@ -187,32 +185,14 @@ section:nth-of-type(2) a{
     .grid-container{
       gap: 0px;
     }
-    .grid-item{
-      width: 140px;
-      height: 140px;
+    section:nth-of-type(2) div:not(div:has(div)){
+      width: 130px;
+      height: 130px;
     }
-    .one{
-        grid-area: 1 / 3 / 1 / 4;
-      }
-      .two{
-        grid-area: 2 / 2 / 2 / 3;
-      }
-      .three{
-        grid-area: 2 / 4 / 2 / 5;
-      }
-      .four{
-        grid-area: 3 / 1 / 3 / 2;
-      }
-      .five{
-        grid-area: 3 / 3 / 3 / 4;
-      }
-      .six{
-       grid-area: 3 / 5 / 3 / 6;
-      }
-      h1 .first-name{
+      h1 span:nth-child(2){
         display: none;
       }
-      h1 .letter::after{
+      h1 span:first-child::after{
         display: inline;
       }
 }
@@ -244,10 +224,14 @@ section:nth-of-type(2) a{
   .logo-name h1{
       width: 100vw;
   }
-  .grid-container{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+  section:nth-of-type(2) div:has(div){
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
   .grid-item{
     width: 120px;
@@ -257,32 +241,19 @@ section:nth-of-type(2) a{
   .container{
       height: 100%;
   }
-  .one{
-      grid-area: 1 / 1 / 1 / 2;
-    }
-    .two{
-      grid-area: 1 / 4 / 1 / 5;
-    }
-    .three{
-      grid-area: 2 / 2 / 2 / 3;
-    }
-    .four{
-      grid-area: 2 / 4 / 2 / 5;
-    }
-    .five{
-      grid-area: 3 / 2 / 3 / 3;
-    }
-    .six{
-     grid-area: 3 / 4 / 3 / 5;
-    }
-    .center{
-      height: 95%;
-      display: flex;
+  section:nth-of-type(1) a{
+    text-align: end;
+    padding-right: 5px;
+  }
+    section:nth-of-type(1){
       flex-direction: column;
       align-items: center;
     }
     h1 .last-name{
       display: none;
+    }
+    section:nth-of-type(2) div:not(div:has(div)){
+      margin: 5px;
     }
 
 }
@@ -312,18 +283,16 @@ section:nth-of-type(2) a{
   }
 }
 @media (max-height: 469px) {
-      .grid-container{
-        max-width: 68.5%;
+      section:nth-of-type(2) div:has(div){
+        max-width: 80%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .grid-item{
-      width: 120px;
-      height: 120px;
+    section:nth-of-type(2) div:not(div:has(div)){
       margin: 15px;
     }
-    .down{
-      margin-bottom: 5px;
+    section:nth-of-type(2){
+      align-items: center;
     }
 }
