@@ -244,11 +244,6 @@ footer a{
     height: 100px;
   }
 }
-@media (min-width:1200px) {
-  header div:first-of-type{
-        width: 15vw;
-      }
-}
 @media (max-height: 420px){
   header div:first-of-type{
     background-image: url(3.png);
