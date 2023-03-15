@@ -43,7 +43,7 @@ header div:first-of-type{
 }
 @keyframes spawn {
     from{
-      margin-top: 300%;
+      margin-top: 200%;
       transform: rotate(359deg);
     }
     to{
@@ -75,8 +75,7 @@ header h1{
     }
     to{
         opacity: 1;
-    }
-    
+    } 
 }
 /* SECTION 1*/
 section:nth-of-type(1) a{
@@ -97,6 +96,8 @@ section:nth-of-type(1) div{
     border: 2px solid black;
     margin: 15px;
     border-radius: 5px;
+    animation-name: glisse;
+    animation-duration: 3s;
 }
 /* SECTION 2*/
 
@@ -129,7 +130,7 @@ section:nth-of-type(2) div:not(div:has(div)) {
     font-size: 30px;
     text-align: center;
     border-radius: 100px;
-    transition-duration: .5s, .5s ;
+    transition-duration: .5s;
     box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.5) inset;
   }
   section:nth-of-type(2) div:not(div:has(div)):hover p{
