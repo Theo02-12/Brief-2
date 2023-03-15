@@ -38,6 +38,18 @@ header div:first-of-type{
   background-image: url(1.png);
   background-size: cover;
   background-position: 100%;
+  animation-name: spawn;
+  animation-duration: 2s;
+}
+@keyframes spawn {
+    from{
+      margin-top: 300%;
+      transform: rotate(359deg);
+    }
+    to{
+      margin-top: 0%;
+      transform: rotate(0deg);
+    }
 }
 h1 span:first-child::after{
   content: ".";
