@@ -201,18 +201,17 @@ a i{
     transition: .5s;
     box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.5) inset;
   }
-  #grid div div:only-child{
+  #grid div div{
     transition: all .5s;
   }
   #grid div:hover div:only-child{
-    transition: .3s ease-in-out;
+    transition: .3s linear;
     transform: rotate(360deg);
     transition-delay: .5s;
 }
 #section-2 div div:hover{
     transform: scale(1.1);
 }
-
 #grid div:first-child:not(div:only-child){
     grid-area: 1 / 3 / 1 / 4;
 }
@@ -271,9 +270,10 @@ header, footer {
     #section-2 div:has(div){
       gap: 0px;
     }
-    #section-2 div:not(div:has(div)){
+    #grid div:not(div:only-child){
       width: 130px;
       height: 130px;
+      margin: 10px;
     }
       h1 span:nth-child(2){
         display: none;
@@ -297,7 +297,7 @@ header, footer {
   header h1{
       width: 100vw;
   }
-  #section-2 div:has(div){
+  #section-2 #grid{
     height: 80%;
     width: 100%;
     display: flex;
@@ -320,6 +320,9 @@ header, footer {
     }
     #section-2 div:not(div:has(div)){
       margin: 5px;
+    }
+    #section-1 div{
+      margin: 8px;
     }
 
 }
