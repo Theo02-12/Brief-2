@@ -187,14 +187,13 @@ a i{
     grid-template-columns: auto;
     grid-template-rows: repeat(3, 1fr);
   }
-#grid div:has(div){
+#grid > div{
     width: 150px;
     height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
     font-size: 30px;
     text-align: center;
     border-radius: 100px;
@@ -344,8 +343,8 @@ header, footer {
   }
 }
 @media (max-height: 469px) {
-    #section-2 div:has(div){
-        max-width: 90%;
+    #section-2 #grid{
+        max-width: 70vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
