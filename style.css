@@ -199,6 +199,7 @@ a i{
     border-radius: 100px;
     transition: .5s;
     box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.5) inset;
+    margin: 15px;
   }
   #grid div div{
     transition: all .5s;
@@ -270,9 +271,8 @@ header, footer {
       gap: 0px;
     }
     #grid div:not(div:only-child){
-      width: 130px;
-      height: 130px;
-      margin: 10px;
+      width: 150px;
+      height: 150px;
     }
       h1 span:nth-child(2){
         display: none;
@@ -344,7 +344,6 @@ header, footer {
 }
 @media (max-height: 469px) {
     #section-2 #grid{
-        max-width: 70vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -354,5 +353,9 @@ header, footer {
     }
     #section-2{
       align-items: center;
+    }
+    #section-2 a{
+      text-align: end;
+      padding-right:15px;
     }
 }
