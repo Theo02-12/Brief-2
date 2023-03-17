@@ -309,7 +309,6 @@ header, footer {
 
   #section-1 a{
     text-align: end;
-    padding-right: 5px;
   }
   #section-1{
     flex-direction: column;
@@ -357,6 +356,5 @@ header, footer {
   }
   #section-2 a{
     text-align: end;
-    padding-right:15px;
   }
 }
